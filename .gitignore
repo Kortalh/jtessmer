@@ -1,6 +1,10 @@
+## System-specific Files
+.DS_Store
+
 node_modules/
 .sass-cache/
 *.css.map
+dist/
 
 ## Contains passwords for localhost
 api/database.config.php

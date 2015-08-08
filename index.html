@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Jesse Tessmer: Web Developer</title>
-	<link rel="stylesheet" type="text/css" href="dist/jt.min.css">
-</head>
-<body>
+<html lang="en" ng-app="JT">
+	<head>
+		<meta charset="utf-8">
+		<title>Jesse Tessmer: Web Developer</title>
+		<link rel="stylesheet" type="text/css" href="dist/jt.min.css">
+	</head>
+	<body>
 
-	<header>
-		<nav></nav>
-	</header>
+		<header></header>
 
-	<main></main>
+		<main ng-view></main>
 
-	<footer></footer>
+		<footer></footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-	<script src="dist/jt.min.js"></script>
-</body>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script> -->
+		<script src="assets/js/angular-1.4.3.min.js"></script>
+		<script src="assets/js/angular-resource-1.4.3.min.js"></script>
+		<script src="assets/js/angular-route-1.4.3.min.js"></script>
+		<script src="dist/jt.min.js"></script>
+	</body>
 </html>
