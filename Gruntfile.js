@@ -11,11 +11,15 @@ module.exports = function(grunt) {
 			},
 
 			js: {
-				files: ['app/*.js','app/**/*.*'],
-				tasks: ['html2js:dist','concat:js']
+				files: ['app/*.js','app/**/*.js',],
+				tasks: ['concat:js']
+			},
+			html: {
+				files: ['app/*.html', 'app/**/*.html'],
+				tasks: ['html2js:dist']
 			},
 			sass: {
-				files: ['assets/scss/main.scss', 'assets/scss/**/*.scss'],
+				files: ['assets/scss/main.scss', 'assets/scss/**/*.scss', 'assets/scss/**/**/*.scss'],
 				tasks: ['sass:dev']
 			}
 		},
@@ -37,7 +41,7 @@ module.exports = function(grunt) {
 				options: {
 					separator: ';',
 				},
-				src: ['app/*.js', 'app/js/**/*.js'],
+				src: ['app/**/**/*.js', 'app/**/*.js', 'app/*.js'],
 				dest: 'dist/jt.min.js'
 			}
 		},
@@ -90,7 +94,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [
 		'html2js:dist',
 		'concat:js',
-		'uglify',
+		// 'uglify',
 		'sass:dist'
 	]);
 
