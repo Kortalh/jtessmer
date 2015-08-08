@@ -1,6 +1,6 @@
-JT.directive('header', function() {
+JT.directive('footer', function() {
 	return {
-		templateUrl: 'app/common/header/headerView.html',
+		templateUrl: 'app/common/footer/footerView.html',
 		controller: ['$scope', '$filter', function($scope, $filter) {
 			// Nothing
 		}]
