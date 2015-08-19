@@ -1,4 +1,7 @@
 
+//===== Libraries =====//
+@import 'libs/normalize';
+
 //===== Includes =====//
 @import 'includes/vars';
 @import 'includes/colors';
@@ -12,3 +15,4 @@
 
 
 //===== Components =====//
+@import 'components/home';
