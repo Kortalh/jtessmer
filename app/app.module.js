@@ -1,3 +1,5 @@
+'use strict';
+
 var JT = angular.module('JT', [
 	'ngRoute',
 	'jtControl',

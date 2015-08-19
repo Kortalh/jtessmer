@@ -1,0 +1,76 @@
+header {
+	position: relative;
+	height: 297px;
+	max-width: 1920px;
+	margin: 0 auto;
+	transition: height 750ms ease-in-out;
+
+	&.small {
+		height: 150px;
+
+		.name {
+			height: 100px;
+		}
+	}
+
+	.ground, .sky {
+		@include absolute(0,0,0,0);
+	}
+	.ground {
+		background-image: url('../assets/img/ground.png');
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: auto 300px;
+	}
+	.sky {
+		background-image: url('../assets/img/sky.png');
+		background-repeat: repeat-x;
+
+		background-position: left center;
+		animation: scrollingSky 120s linear infinite;
+		-moz-animation: scrollingSky 120s linear infinite;
+		-webkit-animation: scrollingSky 120s linear infinite;
+		-ms-animation: scrollingSky 120s linear infinite;
+		-o-animation: scrollingSky 120s linear infinite;
+	}
+
+	.name {
+		background-image: url('../assets/img/jtessmer.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 519px;
+		height: 210px;
+		transition: height 750ms ease-in-out;
+
+		@include absolute(auto, auto, 0, 29%);
+	}
+
+	nav {
+		border-top: 1px solid color(trunk-base);
+	}
+
+}
+
+
+
+
+@keyframes scrollingSky {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1920px; }
+}
+@-moz-keyframes scrollingSky {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1920px; }
+}
+@-webkit-keyframes scrollingSky {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1920px; }
+}
+@-ms-keyframes scrollingSky {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1920px; }
+}
+@-o-keyframes scrollingSky {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1920px; }
+}
