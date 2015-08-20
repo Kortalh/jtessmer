@@ -1,4 +1,4 @@
-jtControl.controller('homeCtrl', ['$scope', function($scope) {
+jtControl.controller('homeController', ['$scope', function($scope) {
 
 	$scope.test = 'This is home.';
 
