@@ -1,7 +1,6 @@
-header {
+.headerBackground {
 	position: relative;
 	height: 297px;
-	max-width: 1920px;
 	margin: 0 auto;
 	transition: height 750ms ease-in-out;
 
@@ -20,7 +19,7 @@ header {
 		background-image: url('../assets/img/ground.png');
 		background-repeat: no-repeat;
 		background-position: right center;
-		background-size: auto 300px;
+		background-size: cover;
 	}
 	.sky {
 		background-image: url('../assets/img/sky.png');
