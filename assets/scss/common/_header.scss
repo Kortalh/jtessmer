@@ -1,53 +1,102 @@
-.headerBackground {
-	position: relative;
-	height: 297px;
-	margin: 0 auto;
-	transition: height 750ms ease-in-out;
-
-	&.small {
-		height: 150px;
-
-		.name {
-			height: 100px;
-		}
-	}
-
-	.ground, .sky {
-		@include absolute(0,0,0,0);
-	}
-	.ground {
-		background-image: url('../assets/img/ground.png');
-		background-repeat: no-repeat;
-		background-position: right center;
-		background-size: cover;
-	}
-	.sky {
-		background-image: url('../assets/img/sky.png');
-		background-repeat: repeat-x;
-
-		background-position: left center;
-		animation: scrollingSky 120s linear infinite;
-		-moz-animation: scrollingSky 120s linear infinite;
-		-webkit-animation: scrollingSky 120s linear infinite;
-		-ms-animation: scrollingSky 120s linear infinite;
-		-o-animation: scrollingSky 120s linear infinite;
-	}
-
-	.name {
-		background-image: url('../assets/img/jtessmer.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 519px;
-		height: 210px;
+header {
+	.headerBackground {
+		position: relative;
+		height: 297px;
+		margin: 0 auto;
 		transition: height 750ms ease-in-out;
 
-		@include absolute(auto, auto, 0, 29%);
+		&.small {
+			height: 150px;
+
+			.name {
+				height: 100px;
+			}
+		}
+
+		.ground, .sky {
+			@include absolute(0,0,0,0);
+		}
+		.ground {
+			background-image: url('../assets/img/ground.png');
+			background-repeat: no-repeat;
+			background-position: right center;
+			background-size: cover;
+		}
+		.sky {
+			background-image: url('../assets/img/sky.png');
+			background-repeat: repeat-x;
+
+			background-position: left center;
+			animation: scrollingSky 120s linear infinite;
+			-moz-animation: scrollingSky 120s linear infinite;
+			-webkit-animation: scrollingSky 120s linear infinite;
+			-ms-animation: scrollingSky 120s linear infinite;
+			-o-animation: scrollingSky 120s linear infinite;
+		}
+
+		.name {
+			background-image: url('../assets/img/jtessmer.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 519px;
+			height: 210px;
+			transition: height 750ms ease-in-out;
+
+			@include absolute(auto, auto, 15px, 20%);
+		}
+
 	}
 
 	nav {
-		border-top: 1px solid color(trunk-base);
-	}
+		border-top: 2px solid lighten( color(grass-light), 3% );
+		border-bottom: 2px solid lighten( color(grass-base), 3% );
+		padding: 10px 0;
 
+		ul {
+			display: inline;
+			padding: 0;
+			text-align: center;
+			position: relative;
+			left: 50%;
+
+			li {
+				display: inline-block;
+				margin-right: 10px;
+
+				a {
+					position: relative;
+					display: inline-block;
+					margin: 0 10px 0 50px;
+					height: 40px;
+
+					&:before {
+						content: ' ';
+						position: absolute;
+						left: -50px;
+						@include size(40px);
+						background: color(mountain-dark);
+					}
+
+					&.home:before {
+						background-color: color(leaves-light);
+					}
+					&.work:before {
+						background-color: color(trunk-light);
+					}
+					&.about:before {
+						background-color: color(mountain-light);
+					}
+					&.blog:before {
+						background-color: color(sky-light);
+					}
+					&.contact:before {
+						background-color: color(water-light);
+					}
+
+				}
+			}
+		}
+	}
 }
 
 

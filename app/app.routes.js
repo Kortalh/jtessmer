@@ -21,7 +21,7 @@ JT.config(['$routeProvider', '$locationProvider', function($routeProvider, $loca
 			templateUrl: 'app/components/work/workView.html',
 			controller: 'workController'
 		})
-		.when('/workDetails', {
+		.when('/work/:workId', {
 			templateUrl: 'app/components/workDetails/workDetailsView.html',
 			controller: 'workDetailsController'
 		})
